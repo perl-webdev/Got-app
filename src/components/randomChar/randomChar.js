@@ -36,7 +36,7 @@ export default class RandomChar extends Component {
 	}
 
     render() {
-		const {char: {name, gender, born, died, culture}, loading, error, defaultText} = this.state;
+		const {char: {name, gender, born, died, culture}, loading, error} = this.state;
 		const errorMessage = error ? <ErrorMessage/> : null;
 		if(loading) {
 			return <Spinner/>
