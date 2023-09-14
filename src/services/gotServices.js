@@ -33,33 +33,36 @@ export default class GotService {
 		return this.getResource(`/houses/${id}/`)
 	}
 	_transformCharacter(char) {
+		const defaultText = "N/A";
 		return {
-			name: char.name,
-			gender: char.gender,
-			born: char.born,
-			died: char.died,
-			culture: char.culture
+			name: char.name || defaultText,
+			gender: char.gender || defaultText,
+			born: char.born || defaultText,
+			died: char.died || defaultText,
+			culture: char.culture || defaultText
 		}
 	}
 	_transformHouses(house) {
+		const defaultText = "N/A";
 		return {
-			name: house.name,
-			region: house.region,
-			words: house.words,
-			titles: house.titles,
-			overlord: house.overlord,
-			ancestralWeapons: house.ancestralWeapons
+			name: house.name || defaultText,
+			region: house.region || defaultText,
+			words: house.words || defaultText,
+			titles: house.titles || defaultText,
+			overlord: house.overlord || defaultText,
+			ancestralWeapons: house.ancestralWeapons || defaultText
 		}
 	}
 	_transformBooks(book) {
+		const defaultText = "N/A";
 		return {
-			name: book.name,
-			isbn: book.isbn,
-			authors: book.authors,
-			numberOfPages: book.numberOfPages,
-			publisher: book.publisher,
-			mediaType: book.mediaType,
-			released: book.released
+			name: book.name || defaultText,
+			isbn: book.isbn || defaultText,
+			authors: book.authors || defaultText,
+			numberOfPages: book.numberOfPages || defaultText,
+			publisher: book.publisher || defaultText,
+			mediaType: book.mediaType || defaultText,
+			released: book.released || defaultText
 		}
 	}
 }

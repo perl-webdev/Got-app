@@ -36,7 +36,7 @@ export default class RandomChar extends Component {
 	}
 
     render() {
-		const {char: {name, gender, born, died, culture}, loading, error} = this.state;
+		const {char: {name, gender, born, died, culture}, loading, error, defaultText} = this.state;
 		const errorMessage = error ? <ErrorMessage/> : null;
 		if(loading) {
 			return <Spinner/>
@@ -44,6 +44,7 @@ export default class RandomChar extends Component {
 		if(error) {
 			return errorMessage;
 		}
+		
 
         return (
             <div className="random-block rounded">
