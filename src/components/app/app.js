@@ -4,6 +4,7 @@ import Header from '../header';
 import RandomChar from '../randomChar';
 import ItemList from '../itemList';
 import CharDetails from '../charDetails';
+import ErrorMessage from '../errorMessage';
 
 
 export default class App extends Component {
@@ -11,7 +12,8 @@ export default class App extends Component {
 		super(props);
 		this.state = {
 			showCharacter: true,
-			selectedChar:130
+			selectedChar:130,
+			error: false
 		};
 		this.toggleNewCharacter = this.toggleNewCharacter.bind(this);
 	}
@@ -22,13 +24,28 @@ export default class App extends Component {
 		})
 	}
 
+	componentDidCatch() {
+		console.log('error');
+		this.setState({
+			error: true
+		})
+	}
+
 	toggleNewCharacter = () => {
 		this.setState((prevState) => ({
 			showCharacter: !prevState.showCharacter
 		}));
 	}
 	render() {
+
 		const {showCharacter} = this.state;
+
+		if(this.state.error) {
+			return(
+				<ErrorMessage/>
+			)
+		}
+
 		return (
 			<>
 				<Container>
