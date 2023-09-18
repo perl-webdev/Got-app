@@ -10,10 +10,15 @@ export default class App extends Component {
 		super(props);
 		this.state = {
 			showCharacter: true,
-			selectedChar:130,
-			error: false
+			selectedChar:130
 		};
 		this.toggleNewCharacter = this.toggleNewCharacter.bind(this);
+	}
+
+	onCharSelected = (id) => {
+		this.setState({
+			selectedChar: id
+		})
 	}
 
 	toggleNewCharacter = () => {
@@ -23,8 +28,8 @@ export default class App extends Component {
 	}
 
 	render() {
-		const {showCharacter} = this.state;
 
+		const {showCharacter} = this.state;
 		return (
 			<>
 				<Container>
