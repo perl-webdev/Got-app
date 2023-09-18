@@ -10,7 +10,7 @@ export default class App extends Component {
 		super(props);
 		this.state = {
 			showCharacter: true,
-			selectedChar:130
+			selectedChar: 130
 		};
 		this.toggleNewCharacter = this.toggleNewCharacter.bind(this);
 	}
@@ -29,7 +29,7 @@ export default class App extends Component {
 
 	render() {
 
-		const {showCharacter} = this.state;
+		const { showCharacter } = this.state;
 		return (
 			<>
 				<Container>
@@ -47,7 +47,7 @@ export default class App extends Component {
 								onClick={this.toggleNewCharacter}>Toggle new Character</button>
 						</Col>
 					</Row>
-					<CharacterPage/>
+					<CharacterPage />
 				</Container>
 			</>
 		);
