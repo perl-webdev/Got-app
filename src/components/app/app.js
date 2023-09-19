@@ -20,7 +20,7 @@ export default class App extends Component {
 		this.toggleNewCharacter = this.toggleNewCharacter.bind(this);
 	}
 
-	onCharSelected = (id) => {
+	onItemSelected = (id) => {
 		this.setState({
 			selectedChar: id
 		})
@@ -55,10 +55,10 @@ export default class App extends Component {
 					<CharacterPage />
 					<Row>
 						<Col md='6'>
-							<ItemList 
-								onCharSelected={this.onCharSelected} 
+							<ItemList
+								onItemSelected={this.onItemSelected}
 								getData={this.GotService.getAllBooks}
-								renderItem={(item) => item.name}/>
+								renderItem={(item) => (item.name)}/>
 						</Col>
 						<Col md='6'>
 							<CharDetails charId={this.state.selectedChar} />
@@ -66,10 +66,10 @@ export default class App extends Component {
 					</Row>
 					<Row>
 						<Col md='6'>
-						<ItemList 
-								onCharSelected={this.onCharSelected} 
+							<ItemList
+								onItemSelected={this.onItemSelected}
 								getData={this.GotService.getAllHouses}
-								renderItem={(item) => item.name}/>
+								renderItem={(item) => item.name} />
 						</Col>
 						<Col md='6'>
 							<CharDetails charId={this.state.selectedChar} />

@@ -17,12 +17,10 @@ export default class RandomChar extends Component {
 	componentDidMount() {
 		this.updateChar()
 		this.timerId = setInterval(this.updateChar, 10000);
-		console.log('mounting');
 	}
 
 	componentWillUnmount() {
 		clearInterval(this.timerId);
-		console.log('unmounting');
 	}
 
 	onError = (err) => {
