@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from 'reactstrap';
 import Header from '../header';
 import RandomChar from '../randomChar';
-import CharacterPage from '../characterPage/characterPage';
+import CharacterPage from '../pages/characterPage/characterPage';
 import ItemList from '../itemList';
 import CharDetails from '../charDetails';
 import GotService from '../../services/gotServices';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BooksPage from '../pages/booksPage/booksPage';
 
 
 export default class App extends Component {
@@ -58,17 +59,7 @@ export default class App extends Component {
 								<Route path='/characters' Component={CharacterPage}/>
 							</Routes>
 						<CharacterPage />
-						<Row>
-							<Col md='6'>
-								<ItemList
-									onItemSelected={this.onItemSelected}
-									getData={this.GotService.getAllBooks}
-									renderItem={(item) => (item.name)}/>
-							</Col>
-							<Col md='6'>
-								<CharDetails charId={this.state.selectedChar} />
-							</Col>
-						</Row>
+						<BooksPage/>
 						<Row>
 							<Col md='6'>
 								<ItemList

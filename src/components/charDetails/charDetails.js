@@ -3,7 +3,7 @@ import './charDetails.css';
 import GotService from '../../services/gotServices';
 import ErrorMessage from '../errorMessage';
 
-const Field = ({ char, field, label}) => {
+const Field = ({ char, field, label }) => {
 	return (
 		<li className="list-group-item d-flex justify-content-between">
 			<span className="term">{label}</span>
@@ -63,8 +63,8 @@ export default class CharDetails extends Component {
 			return <ErrorMessage />
 		}
 
-		const {char} = this.state;
-		const {name} = char;
+		const { char } = this.state;
+		const { name } = char;
 
 		return (
 			<div className="char-details rounded">
@@ -72,7 +72,7 @@ export default class CharDetails extends Component {
 				<ul className="list-group list-group-flush">
 					{
 						React.Children.map(this.props.children, (child) => {
-							return React.cloneElement(child, {char})
+							return React.cloneElement(child, { char })
 						})
 					}
 				</ul>
