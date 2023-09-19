@@ -36,13 +36,13 @@ const Header = () => {
             </HeaderTitle>
             <HeaderLinks>
                 <li>
-                    <a href="#">Characters</a>
+                    <a href="https://www.hbo.com/game-of-thrones">Characters</a>
                 </li>
                 <li>
-                    <a href="#">Houses</a>
+                    <a href="https://www.hbo.com/game-of-thrones">Houses</a>
                 </li>
                 <li>
-                    <a href="#">Books</a>   
+                    <a href="https://www.hbo.com/game-of-thrones">Books</a>   
                 </li>
             </HeaderLinks>
         </HeaderBlock>
