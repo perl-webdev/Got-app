@@ -37,7 +37,7 @@ export default class ItemList extends Component {
 				<li
 					key={i}
 					className="list-group-item"
-					onClick={() => this.props.onItemSelected(41 + i)}>
+					onClick={() => this.props.onItemSelected(1+i)}>
 					{label}
 				</li>
 			)
@@ -48,7 +48,7 @@ export default class ItemList extends Component {
 		const { itemList } = this.state;
 
 		if (!itemList) {
-			return <Spinner />
+			return <Spinner/>
 		}
 
 		if(this.state.error) {

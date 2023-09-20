@@ -24,7 +24,7 @@ export default class CharacterPage extends Component {
 
 	onItemSelected = (id) => {
 		this.setState({
-			selectedChar: id
+			selectedChar: id+40
 		})
 	}
 
@@ -37,7 +37,8 @@ export default class CharacterPage extends Component {
 		}
 
 		const itemList = (
-			<ItemList onItemSelected={this.onItemSelected}
+			<ItemList 
+				onItemSelected={this.onItemSelected}
 				getData={this.GotService.getAllCharacters}
 				renderItem={({ name, gender }) => `${name} (${gender})`} />
 		)

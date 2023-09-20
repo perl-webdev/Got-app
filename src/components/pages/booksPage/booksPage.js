@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemList from '../../itemList';
-import CharDetails, { Field } from '../../charDetails';
+import BookDetails, { BookField } from '../../bookDetails';
 import ErrorMessage from '../../errorMessage';
 import GotService from '../../../services/gotServices';
 import RowBlock from '../../rowBlock';
@@ -24,7 +24,7 @@ export default class BooksPage extends Component {
 	onItemSelected = (id) => {
 		this.setState({
 			selectedBook: id
-		})
+		});
 	}
 
 	render() {
@@ -43,13 +43,12 @@ export default class BooksPage extends Component {
 		)
 
 		const bookDetails = (
-			/*Here is the FUCKING PROBLEM (I MEAN itemId), WE NEED TO REWORK CHARDETAILS AND TO MAKE IT UNIVERSAL */ 
-			<CharDetails itemId={this.state.selectedBook}> 
-				<Field field='name' label='Name' />
-				<Field field='numberofpages' label='Number of Pages' />
-				<Field field='publisher' label='Publisher' />
-				<Field field='released' label='Release' />
-			</CharDetails>
+			<BookDetails bookId={this.state.selectedBook}> 
+				<BookField field='name' label='Name' />
+				<BookField field='numberOfPages' label='Number of Pages' />
+				<BookField field='publisher' label='Publisher' />
+				<BookField field='released' label='Release' />
+			</BookDetails>
 		)
 		return (
 			<RowBlock left={itemList} rigth={bookDetails} />

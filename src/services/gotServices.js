@@ -25,8 +25,8 @@ export default class GotService {
 		return res.map(this._transformBooks);
 	}
 	getBooks = async (id) => {
-		const res = await this.getResource(`/books/${id}/`);
-		return res.map(this._transformBooks);
+		const res = await this.getResource(`/books/${id}`);
+		return this._transformBooks(res); // Return the transformed book object, not an array
 	}
 	getAllHouses = async () => {
 		const res = await this.getResource(`/houses/`);
@@ -34,7 +34,7 @@ export default class GotService {
 	}
 	getHouses = async (id) => {
 		const res = await this.getResource(`/houses/${id}/`);
-		return res.map(this._transformHouses);
+		return this._transformHouses(res);
 	}
 
 	isSet(data) {
@@ -62,7 +62,7 @@ export default class GotService {
 			region: this.isSet(house.region),
 			words: this.isSet(house.words),
 			titles: this.isSet(house.titles),
-			overlord: this.isSet(house.overlord),
+			seats: this.isSet(house.seats),
 			ancestralWeapons: this.isSet(house.ancestralWeapons)
 		}
 	}
