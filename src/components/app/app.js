@@ -56,10 +56,9 @@ export default class App extends Component {
 						</Row>
 							<Routes>
 								<Route path='/characters' Component={CharacterPage}/>
+								<Route path='/houses' Component={HousesPage}/>
+								<Route path='/books' Component={BooksPage}/>
 							</Routes>
-						<CharacterPage style={{marginBottom:20}}/>
-						<BooksPage/>
-						<HousesPage/>
 					</Container>
 				</div>
 			</BrowserRouter>
