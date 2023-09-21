@@ -8,7 +8,7 @@ const NotFound = () => {
 			<div class="card-body">
 				<h1 class="card-title">The page you are looking for does not exist</h1>
 				<h3 class="card-text text-center">Please check the URL you're looking for! Press the button below to return on the Home Page!</h3>
-				<Link to='/' className="btn btn-dark" style={{fontWeight:'600'}}>Home Page</Link>
+				<Link to='/' className="btn btn-dark btn-lg">Home Page</Link>
 			</div>
 		</div>
 	);
