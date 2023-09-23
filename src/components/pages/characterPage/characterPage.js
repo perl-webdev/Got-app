@@ -77,7 +77,7 @@ export default class CharacterPage extends Component {
 
 		return (
 			<>
-				<div class="container text-center">
+				<div className="container text-center">
 						<Row>
 							<Col lg={{ size: 5, offset: 0 }}>
 								{showCharacter && <RandomChar />}

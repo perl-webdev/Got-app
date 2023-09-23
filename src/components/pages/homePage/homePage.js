@@ -29,8 +29,8 @@ export default class HomePage extends Component {
 	}
 	render() {
 		return (
-			<div class="row align-items-center text-center">
-				<div class="col">
+			<div className="row align-items-center text-center">
+				<div className="col">
 					<div className="card" style={{ width: "18rem" }}>
 						<div className="card-body">
 							<h2 className="card-title">Hello everybody!</h2>
@@ -39,7 +39,7 @@ export default class HomePage extends Component {
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div className="col">
 					<div className="card" style={{ width: "18rem" }}>
 						<div className="card-body">
 							<h2 className="card-title">First Step!</h2>
@@ -47,7 +47,7 @@ export default class HomePage extends Component {
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div className="col">
 					<div className="card" style={{ width: "18rem" }}>
 						<div className="card-body">
 							<h2 className="card-title">Second Step!</h2>
