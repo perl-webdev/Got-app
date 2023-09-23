@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The tree of GOT DB App.
+<br>
+![image](https://github.com/perl-webdev/Got-app/assets/129889151/a3ed5cdc-8847-438e-929a-8d33d8455e7a)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
